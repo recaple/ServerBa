@@ -18,4 +18,6 @@ cp t2.sh /usr/lib/cgi-bin/
 cp t3.sh /usr/lib/cgi-bin/
 cp t4.sh /usr/lib/cgi-bin/
 cp t0.sh /usr/lib/cgi-bin/
+/etc/init.d/httpd restart 
+/etc/init.d/nginx restart 
 exit
