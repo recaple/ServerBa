@@ -20,5 +20,5 @@ cp t3.sh /usr/lib/cgi-bin/
 cp t4.sh /usr/lib/cgi-bin/
 cp t0.sh /usr/lib/cgi-bin/
 mv cronio.sh /home/recaple/
-echo "* * * * * /home/recaple/cronio.sh" >> /etc/crontab
+echo "* * * * * root /home/recaple/cronio.sh" >> /etc/crontab
 exit
