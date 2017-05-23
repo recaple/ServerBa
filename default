@@ -1,0 +1,11 @@
+server {
+    listen 80;
+    
+    root /var/www/html;
+    location = /sysinfo/ {
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Real-Port $remote_port;
+	proxy_set_header X-NGX-VERSION $nginx_version;
+        proxy_pass http://127.0.0.1:8080;
+    }
+}
