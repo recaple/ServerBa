@@ -1,5 +1,5 @@
 #!/bin/bash 
-k=$(wc -l /home/recaple/netz.txt | awk '{print $1}') 
+k=$(wc -l /home/recaple/n.txt | awk '{print $1}') 
 count=0 
 echo "<body>" 
 echo  "<br />"
@@ -11,7 +11,7 @@ while [ $count -lt $k ]
 do 
 count=$(( $count + 1 )) 
 echo "<tr>" 
-cat /home/recaple/netz.txt | head -n$count | tail -n1| awk '{ for(i=1; i<18; i++){ print ("<td>" $i "</td>")}}' 
+cat /home/recaple/n.txt | head -n$count | tail -n1| awk '{ for(i=1; i<18; i++){ print ("<td>" $i "</td>")}}' 
 echo "</tr>" 
 done; 
 echo "</tr>" 
