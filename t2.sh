@@ -1,7 +1,7 @@
 #!/bin/bash
-k=$(wc -l /home/recaple/test.txt | awk '{print $1}') 
+k=$(wc -l /home/recaple/t.txt | awk '{print $1}') 
 count=0 
-cat /home/recaple/test.txt | head -n$count | tail -n1 | awk '{ for(i=1; i<7; i++){ print ("<td>" $i "</td>")}}'  
+cat /home/recaple/t.txt | head -n$count | tail -n1 | awk '{ for(i=1; i<7; i++){ print ("<td>" $i "</td>")}}'  
 pygmentize (){
 if [[ $(echo "$1 > 90" | bc) -eq 1 ]]; then 
 OUT="<span style='color: red;'>$2</span>" 
@@ -19,13 +19,13 @@ while [ $count -lt $k ]
 do
 count=$(( $count + 1 ))
 echo "<tr>"
-cat /home/recaple/test.txt | head -n$count | tail -n1 | awk  '{ for(i=1; i<5; i++){ print ("<td>" $i "</td>")}}'
+cat /home/recaple/t.txt | head -n$count | tail -n1 | awk  '{ for(i=1; i<5; i++){ print ("<td>" $i "</td>")}}'
 echo "<td>" 
-d=$(cat /home/recaple/test.txt | head -n$count | tail -n1 | awk '{print $5}' | cut -d"%" -f1)
-t=$(cat /home/recaple/test.txt | head -n$count | tail -n1 | awk '{print $5}')
+d=$(cat /home/recaple/t.txt | head -n$count | tail -n1 | awk '{print $5}' | cut -d"%" -f1)
+t=$(cat /home/recaple/t.txt | head -n$count | tail -n1 | awk '{print $5}')
 pygmentize $d $t
 echo "</td>"
-cat /home/recaple/test.txt | head -n$count | tail -n1 | awk  '{print ("<td>" $6 "</td>")}' 
+cat /home/recaple/t.txt | head -n$count | tail -n1 | awk  '{print ("<td>" $6 "</td>")}' 
 echo "</tr>" 
 done; 
 echo "</table>" 
