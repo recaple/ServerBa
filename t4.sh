@@ -1,5 +1,5 @@
 #!/bin/bash
-z=$(wc -l /home/recaple/nets.txt | awk '{print $1}') 
+z=$(wc -l /home/recaple/net.txt | awk '{print $1}') 
 c=0 
 echo "<body>" 
 echo "<br />";
@@ -10,7 +10,7 @@ while [ $c -lt $z ]
 do 
 c=$(( $c + 1 )) 
 echo "<tr>" 
-cat /home/recaple/nets.txt | head -n$c | tail -n1 | awk '{ for(i=1; i<10; i++){ print ("<td>" $i "</td>")}}' 
+cat /home/recaple/net.txt | head -n$c | tail -n1 | awk '{ for(i=1; i<10; i++){ print ("<td>" $i "</td>")}}' 
 echo "</tr>" 
 echo "<br />" 
 done; 
