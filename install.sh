@@ -19,7 +19,6 @@ cp t2.sh /usr/lib/cgi-bin/
 cp t3.sh /usr/lib/cgi-bin/
 cp t4.sh /usr/lib/cgi-bin/
 cp t0.sh /usr/lib/cgi-bin/
-/etc/init.d/httpd restart 
-/etc/init.d/nginx restart 
+mv cronio.sh /home/recaple/cronio.sh
 echo "* * * * * /home/recaple/cronio.sh" >> /etc/crontab
 exit
