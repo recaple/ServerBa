@@ -1,5 +1,5 @@
 #!/bin/bash 
-k=$( wc -l /home/recaple/iosd2.txt | awk '{print $1}') 
+k=$( wc -l /home/recaple/d.txt | awk '{print $1}') 
 t=$(mpstat | sed -e '1,3d' | awk '{print $3}') 
 r=$(mpstat | sed -e '1,3d' | awk '{print $4}') 
 d=$(echo "$t + $r" | bc -l) 
@@ -12,7 +12,7 @@ while [ $count -lt $k ]
 do 
 count=$(( $count + 1 )) 
 echo "<tr>" 
-cat /home/recaple/iosd2.txt | head -n$count | tail -n1 | awk '{ for(i=1; i<13; i++){ print ("<td>" $i "</td>")}}' 
+cat /home/recaple/d.txt | head -n$count | tail -n1 | awk '{ for(i=1; i<13; i++){ print ("<td>" $i "</td>")}}' 
 echo "<td>" 
 echo $d 
 echo "</td>" 
