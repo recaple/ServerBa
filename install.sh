@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir /home/recaple
 apt-get install -y bc 
 apt-get install -y elinks
 apt-get install -y sysstat
