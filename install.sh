@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo -i
 apt-get install -y bc 
 apt-get install -y elinks 
 apt-get install -y apache2
