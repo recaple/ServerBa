@@ -1,4 +1,5 @@
 #!/bin/bash
+mkdir /home/recaple
 apt-get install -y bc
 apt-get install -y elinks
 apt-get install -y sysstat
@@ -18,5 +19,8 @@ cp t2.sh /usr/lib/cgi-bin/
 cp t3.sh /usr/lib/cgi-bin/
 cp t4.sh /usr/lib/cgi-bin/
 cp t0.sh /usr/lib/cgi-bin/
+cp cronio.sh /home/recaple
+chmod +x /home/recaple/cronio.sh
+echo " * * * * * root /home/recaple/cronio.sh" > /etc/crontab
 exit
 
